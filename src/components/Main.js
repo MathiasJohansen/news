@@ -11,13 +11,13 @@ export default function Main(){
 
 
     const getNews = async() =>{
-        const response = await fetch('https://newsapi.org/v2/everything?q=last-of-us&pageSize=20&apiKey=DIN-NØKKEL')
+        const response = await fetch('https://newsapi.org/v2/everything?q=last-of-us&pageSize=20&apiKey=723d4a99948b4e1ca6db8f68dc8fd46b')
         const data = await response.json()
         setNews(data.articles)
         setResultat(news?.filter(items => items?.source?.name === filter))
     }
 
-    console.log(resultat)
+    console.log(news)
 
     useEffect(() =>{
         getNews()
